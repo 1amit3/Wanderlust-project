@@ -116,7 +116,7 @@ app.use("/listings/:id/reviews", reviewsrouter)
 app.use("/listings", listingrouter)
 app.use("/",userrouter)
 app.get("/", (req, res) => {
-    res.render("/listings")
+    res.redirect("/listings")
 })
 
 
