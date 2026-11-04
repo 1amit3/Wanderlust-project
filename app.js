@@ -115,7 +115,9 @@ app.get("/demouser", async (req, res) => {
 app.use("/listings/:id/reviews", reviewsrouter)
 app.use("/listings", listingrouter)
 app.use("/",userrouter)
-
+app.get("/", (req, res) => {
+    res.render("/listings")
+})
 
 
 app.all("/*splat", (req, res, next) => {
